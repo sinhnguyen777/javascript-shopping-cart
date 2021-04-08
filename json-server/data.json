@@ -1,0 +1,136 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Ellie Cosmetics Brush",
+      "img": "sp1.png",
+      "price": 19,
+      "price_sale": 3,
+      "id_catalog": 1
+    },
+    {
+      "id": 2,
+      "name": "Cosmetic Branding Cream",
+      "img": "sp2.png",
+      "price": 30,
+      "price_sale": 35,
+      "id_catalog": 1
+    },
+    {
+      "id": 3,
+      "name": "Liquid Container Green",
+      "img": "sp3.png",
+      "price": 12,
+      "price_sale": 18,
+      "id_catalog": 2
+    },
+    {
+      "id": 4,
+      "name": "Ellie Bath Salt",
+      "img": "sp4.png",
+      "price": 12,
+      "price_sale": 15,
+      "id_catalog": 2
+    },
+    {
+      "id": 5,
+      "name": "Ellie Deodorant Spray",
+      "img": "sp5.png",
+      "price": 3,
+      "price_sale": 5,
+      "id_catalog": 2
+    },
+    {
+      "id": 6,
+      "name": "Ellie Cream Soap",
+      "img": "sp6.png",
+      "price": 9,
+      "price_sale": 13,
+      "id_catalog": 2
+    },
+    {
+      "id": 7,
+      "name": "She Shampoo & Conditionier",
+      "img": "sp7.png",
+      "price": 35,
+      "price_sale": 39,
+      "id_catalog": 3
+    },
+    {
+      "id": 8,
+      "name": "Mockup Cosmetics Set",
+      "img": "sp8.png",
+      "price": 18,
+      "price_sale": 20,
+      "id_catalog": 3
+      
+    },
+    {
+      "id": 9,
+      "name": "Ellie AZ Skin Care",
+      "img": "sp10.png",
+      "price": 15,
+      "price_sale": 0,
+      "id_catalog": 4
+    },
+    {
+      "id": 10,
+      "name": "Ellie Day & Night Cream",
+      "img": "sp13.png",
+      "price": 35,
+      "price_sale": 0,
+      "id_catalog": 4
+    },
+    {
+      "id": 11,
+      "name": "Ellie Hair Elixir",
+      "img": "sp9.png",
+      "price": 35,
+      "price_sale": 36,
+      "id_catalog": 4
+    },
+    {
+      "id": 12,
+      "name": "Ellie Lotion & Cream",
+      "img": "sp11.png",
+      "price": 9,
+      "price_sale": 0,
+      "id_catalog": 5
+    },
+    {
+      "id": 13,
+      "name": "Ellie Spa Gif9999",
+      "img": "sp12.png",
+      "price": 20,
+      "price_sale": 22,
+      "id_catalog": 5
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Arts & Photography"
+    },
+    {
+      "id": 2,
+      "name": "Biographies"
+    },
+    {
+      "id": 3,
+      "name": "Business & Money"
+    },
+    {
+      "id": 4,
+      "name": "Children's Books"
+    },
+    {
+      "id": 5,
+      "name": "Comics"
+    },
+    {
+      "id": 6,
+      "name": "Cookbooks"
+    }
+    
+  ]
+}

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="public/images/logo-domain.png" type="image/png" sizes="30x30">
+    <title>ELLIE</title>
+    <link rel="stylesheet" href="public/sass/style.css">
+    <link rel="stylesheet" href="public/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="public/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="public/js/jquery-3.5.1.min.js"></script>
+    <script src="public/js/main.js"></script>
+</head>
+
+<body class="body-product">
+    <div class="wrapper pl-3 pr-3" id="wrapper">
+        <header>
+            <div class="header-top-link d-flex align-content-center">
+                <div class="w-100">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <aside class="d-flex justify-content-start">
+                            <a class="nav-link icon-bar text-dark" id="icon_bar" href="#">
+                                <label for="click" class="menu-btn m-0"></label>
+                                <i class="fas fa-bars"></i>
+                                </label>
+                            </a>
+                        </aside>
+                        <nav class="menu d-flex justify-content-center">
+                            <ul class="nav">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item menu-hover">
+                                    <a class="nav-link" href="product.html"> Shop
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </a>
+                                    <ul class="bg-menu-hover">
+                                        <div class="shape"></div>
+                                        <li class="top-hover"><a href="">Simple Product</a></li>
+                                        <li><a href="">Variable Product</a></li>
+                                        <li><a href="">Product with Rich Description</a></li>
+                                        <li><a href="">On Sale Product Example</a></li>
+                                        <li><a href="">All Products</a></li>
+                                        <li><a href="">Category with Description</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+                            </ul>
+                            <div class="logo d-flex justify-content-center align-items-center">
+                                <img src="public//images//logo.png" alt="">
+                            </div>
+                            <ul class="nav">
+                                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                                <li class="nav-item menu-hover">
+                                    <a class="nav-link" href="#"> Acount
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </a>
+                                    <ul class="accout-menu-hover">
+                                        <div class="shape"></div>
+                                        <li class="top-hover"><a href="login.html">Login</a></li>
+                                        <li><a href="register.html">Register</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <aside class="d-flex justify-content-end">
+                            <a class="nav-link icon-cart text-dark" href="">
+                                <label>
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bag-check"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5H2z" />
+                                        <path fill-rule="evenodd"
+                                            d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                    <span id="itemCartSpan">0</span>
+                                </label>
+                            </a>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="menu-reponsive" id="menu_reponsive">
+            <form>
+                <div class="form-row">
+                    <div class="col-10">
+                        <input type="search" class="search" placeholder="Search...">
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                            <path fill-rule="evenodd"
+                                d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </form>
+            <div class="menu-sidebar">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="">HOME PAGE</a></li>
+                    <li>
+                        <a href="#shop" data-toggle="collapse" aria-expanded="false">
+                            <span class="list dropdown-toggle">Catalog</span>
+                        </a>
+                        <ul class="collapse lisst-unstyled" id="shop">
+                            <li><a href="">SHOPPING CART</a></li>
+                            <li><a href="">CHECKOUT</a></li>
+                            <li><a href="">ORDER</a></li>
+                            <li><a href="">TERMS & CONDITIONS</a></li>
+                            <li><a href="">LOREM IPSUM</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">GUTENBERG PAGE PREVIEW</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">ACCOUNT</a></li>
+                    <li><a href="">CONTACTS</a></li>
+                </ul>
+                <h2>ELLIE</h2>
+            </div>
+        </div>
+        <div class="benner-product">
+            <img src="public/images/ribbon2.png" alt="">
+            <nav class="nav-benner-product">
+                <a href="">Home</a> / <a href="">shop</a>
+                <h1>Shop</h1>
+            </nav>
+        </div>
+        <section class="content-product">
+            <div class="shop-product col-md-12">
+                <div class="row">
+                    <aside class="col-md-3 mb-5 mt-3 pr-3 p-0">
+                        <aside class="aside-item p-0">
+                            <div class="accordion" id="accordionExample">
+                                <div class="title-product d-flex justify-content-center">
+                                    <h3 class="m-0">PRODUCT CATEGORIES</h3>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside class="aside-item">
+                            <ul class="pl-3 pb-3 mt-1 mb-2 ul-overflow" id="listCategory">
+                                <!-- <li class="befor-check">
+                                    <div class="form-check pt-2 pb-2">
+                                        <a href="#li-1"  class="list dropdown-toggle" data-toggle="collapse" aria-expanded="true">
+                                            <a href="">Cosmetics</a>
+                                        </a>
+                                        <ul class="collapse lisst-unstyled" id="li-1">
+                                            <li class="pt-2"><a href="">Natural</a></li>
+                                            <li class="pt-2"><a href="">Spa & Saloon</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="befor-check">
+                                    <div class="form-check pt-2 pb-2">
+                                        <label class="form-check-label">
+                                            <a href="">Herbal Collection</a>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="befor-check">
+                                    <div class="form-check pt-2 pb-2">
+                                        <a href="#li-2"  class="list dropdown-toggle" data-toggle="collapse" aria-expanded="true">
+                                            <a href="">Makeup</a>
+                                        </a>
+                                        <ul class="collapse lisst-unstyled" id="li-2">
+                                            <li class="pt-2"><a href="">Body</a></li>
+                                            <li class="pt-2"><a href="">Lips & Face</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="befor-check">
+                                    <div class="form-check pt-2 pb-2">
+                                        <label class="form-check-label">
+                                            <a href="">Personal Care</a>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="befor-check">
+                                    <div class="form-check pt-2 pb-2">
+                                        <label class="form-check-label">
+                                            <a href="">Skin</a>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="befor-check">
+                                    <div class="form-check pt-2 pb-2">
+                                        <label class="form-check-label">
+                                            <a href="">Uncategorized</a>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="befor-check">
+                                    <div class="form-check pt-2 pb-2">
+                                        <label class="form-check-label">
+                                            <a href="">Wellness </a>
+                                        </label>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </aside>
+                        <aside class="aside-item p-0">
+                            <div class="accordion" id="accordionExample">
+                                <div class="title-product d-flex justify-content-center">
+                                    <h3 class="m-0">SEARCH</h3>
+                                </div>
+                                <input type="search" name="" id="" value="" placeholder="Search products…">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                        </aside>
+                        <aside class="aside-item mt-4">
+                            <div class="accordion pb-3 mt-3 mb-2 ul-overflow" id="accordionExample">
+                                <div class="title-product d-flex justify-content-center">
+                                    <h3 class="m-0">PRODUCT CATEGORIES</h3>
+                                </div>
+                            </div>
+                            <ul class="pl-3 pb-3 mt-1 mb-2 ul-overflow">
+                                <li class="befor-check">
+                                    <div class="form-check pt-2 pb-2">
+                                        <label class="form-check-label">
+                                            <a href="">Black</a>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="befor-check">
+                                    <div class="form-check pt-2 pb-2">
+                                        <label class="form-check-label">
+                                            <a href="">Blue</a>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="befor-check">
+                                    <div class="form-check pt-2 pb-2">
+                                        <label class="form-check-label">
+                                            <a href="">Green</a>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside>
+                    </aside>
+                    <section class="col-md-9 mb-5 mt-3 pr-0">
+                        <div class="card-products">
+                            <div class="sort-cate pt-2 pb-2">
+                                <p> Showing 1–12 of 23 results</p>
+                                <!-- <div class="dropup">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Dropup
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        euhn
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <section id="product">
+                            <div class="col-md-12 p-0 card-product">
+                                <div class="row" id="listProduct">
+                                    <!-- <div class="col-md-4">
+                                        <div class="card border-0 w-100" style="width: 18rem;">
+                                            <div class="img-cart">
+                                                <img src="public/images/sp1.png" class="card-img-top" alt="...">
+                                                <button class="btn-add">ADD TO CART</button>
+                                            </div>
+                                            <div class="sale">
+                                                <p>SALE</p>
+                                            </div>
+                                            <div class="card-body pl-0 pr-0">
+                                                <h5 class="card-title">Ellie Cosmetics Brush</h5>
+                                                <p class="price-cart"><span>£30.00</span> - £35.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border-0 w-100" style="width: 18rem;">
+                                            <div class="img-cart">
+                                                <img src="public/images/sp2.png" class="card-img-top" alt="...">
+                                                <button class="btn-add">ADD TO CART</button>
+                                            </div>
+                                            <div class="sale">
+                                                <p>SALE</p>
+                                            </div>
+                                            <div class="card-body pl-0 pr-0">
+                                                <h5 class="card-title">Cosmetic Branding Cream</h5>
+                                                <p class="price-cart"><span>£3.00</span> - £2.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border-0 w-100" style="width: 18rem;">
+                                            <div class="img-cart">
+                                                <img src="public/images/sp3.png" class="card-img-top" alt="...">
+                                                <button class="btn-add">ADD TO CART</button>
+                                            </div>
+                                            <div class="sale">
+                                                <p>SALE</p>
+                                            </div>
+                                            <div class="card-body pl-0 pr-0">
+                                                <h5 class="card-title">Liquid Container Green</h5>
+                                                <p class="price-cart"><span>£15.00</span> - £12.00</p>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <!-- <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card border-0 w-100" style="width: 18rem;">
+                                            <div class="img-cart">
+                                                <img src="public/images/sp1.png" class="card-img-top" alt="...">
+                                                <button class="btn-add">ADD TO CART</button>
+                                            </div>
+                                            <div class="sale">
+                                                <p>SALE</p>
+                                            </div>
+                                            <div class="card-body pl-0 pr-0">
+                                                <h5 class="card-title">Ellie Cosmetics Brush</h5>
+                                                <p class="price-cart"><span>£30.00</span> - £35.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border-0 w-100" style="width: 18rem;">
+                                            <div class="img-cart">
+                                                <img src="public/images/sp2.png" class="card-img-top" alt="...">
+                                                <button class="btn-add">ADD TO CART</button>
+                                            </div>
+                                            <div class="sale">
+                                                <p>SALE</p>
+                                            </div>
+                                            <div class="card-body pl-0 pr-0">
+                                                <h5 class="card-title">Cosmetic Branding Cream</h5>
+                                                <p class="price-cart"><span>£3.00</span> - £2.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border-0 w-100" style="width: 18rem;">
+                                            <div class="img-cart">
+                                                <img src="public/images/sp3.png" class="card-img-top" alt="...">
+                                                <button class="btn-add">ADD TO CART</button>
+                                            </div>
+                                            <div class="sale">
+                                                <p>SALE</p>
+                                            </div>
+                                            <div class="card-body pl-0 pr-0">
+                                                <h5 class="card-title">Liquid Container Green</h5>
+                                                <p class="price-cart"><span>£15.00</span> - £12.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card border-0 w-100" style="width: 18rem;">
+                                            <div class="img-cart">
+                                                <img src="public/images/sp1.png" class="card-img-top" alt="...">
+                                                <button class="btn-add">ADD TO CART</button>
+                                            </div>
+                                            <div class="sale">
+                                                <p>SALE</p>
+                                            </div>
+                                            <div class="card-body pl-0 pr-0">
+                                                <h5 class="card-title">Ellie Cosmetics Brush</h5>
+                                                <p class="price-cart"><span>£30.00</span> - £35.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border-0 w-100" style="width: 18rem;">
+                                            <div class="img-cart">
+                                                <img src="public/images/sp2.png" class="card-img-top" alt="...">
+                                                <button class="btn-add">ADD TO CART</button>
+                                            </div>
+                                            <div class="sale">
+                                                <p>SALE</p>
+                                            </div>
+                                            <div class="card-body pl-0 pr-0">
+                                                <h5 class="card-title">Cosmetic Branding Cream</h5>
+                                                <p class="price-cart"><span>£3.00</span> - £2.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border-0 w-100" style="width: 18rem;">
+                                            <div class="img-cart">
+                                                <img src="public/images/sp3.png" class="card-img-top" alt="...">
+                                                <button class="btn-add">ADD TO CART</button>
+                                            </div>
+                                            <div class="sale">
+                                                <p>SALE</p>
+                                            </div>
+                                            <div class="card-body pl-0 pr-0">
+                                                <h5 class="card-title">Liquid Container Green</h5>
+                                                <p class="price-cart"><span>£15.00</span> - £12.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </section>
+                        <nav aria-label="Page navigation example" class="pt-5 d-flex justify-content-center">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <div class="clear" style="clear: both;"></div>
+
+        <footer>
+            <div class="footer-ellie">
+                <h3 class="pt-5 pb-3">Newsletter</h3>
+                <p>Get timely updates from your favorite products</p>
+                <input class="mt-4" type="email" placeholder="Your email address">
+                <input type="submit" value="Subscribe">
+            </div>
+            <div class="bottom-footer">
+                <div class="bottom-footer-left col-md-6 float-left">
+                    <a href="">Proudly powered by WordPress</a><span> | </span>THEM <b>ELLIE</b> BY
+                </div>
+                <ul class="col-md-6 float-right">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">ACCOUNT</a></li>
+                    <li><a href="">SHOPPING CART</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+    <!-- menu: icon-bar -->
+    <script defer>
+        $(document).ready(function () {
+            $('#icon_bar').click(function () {
+                $('#wrapper').toggleClass('wrapper-reponsive');
+                $('#menu_reponsive').toggleClass('menu-reponsive-2');
+            });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="public/owlcarousel/owl.carousel.min.js"></script>
+    <script src="public/js/products.js"></script>
+    <script src="public/js/category.js"></script>
+</body>
+
+</html>
