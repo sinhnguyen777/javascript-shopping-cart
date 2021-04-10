@@ -1,23 +1,20 @@
-// var url = 'http://localhost:3000/category'
+const urlcate = "http://localhost:3000/categorys";
 
-// fetch(url, {
-//     method: 'GET'
-// })
-// .then((response) => {
-//     return response.json()
-// })
-// .then((data) => {
-//     // console.log(data);
-//     data.forEach((index, item) => {
-//         // console.log(index);
-//         document.querySelector('#listCategory').innerHTML += `
-//         <li class="befor-check">
-//             <div class="form-check pt-2 pb-2">
-//                 <label class="form-check-label">
-//                     <a href="">${index.name}</a>
-//                 </label>
-//             </div>
-//         </li>
-//         `
-//     });
-// })
+async function getAPI(){
+    const response= await fetch(urlcate)
+    const arr = await response.json();
+    arr.forEach((index, item) => {
+        document.querySelector("#listCategory").innerHTML += `
+        <li class="befor-check">
+            <div class="form-check pt-2 pb-2">
+                <label class="form-check-label">
+                    <a href="">${index.name} Care</a>
+                </label>
+            </div>
+        </li>
+        `;
+    });
+        
+}
+
+getAPI()
