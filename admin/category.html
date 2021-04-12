@@ -325,13 +325,82 @@
                 <a href="#" class="btn btn-primary mb-2" onclick="UnselectAll()">UnSelect All</a>
               </div>
               <div class="col-auto">
-                <a href="add-category.html" class="btn btn-primary mb-2">Add New</a>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary m-0 mb-2" data-toggle="modal"
+                  data-target="#exampleModal">
+                  Add New
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">CATEGORY</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="form-add-product" action="" method="post" enctype="multipart/form-data">
+                          <div class="form-group">
+                            <label for="">Product id</label>
+                            <input type="text" readonly name="idCategory" id="idProduct" class="form-control" value="" />
+                          </div>
+                          <div class="form-group">
+                            <label for="">Product's name</label>
+                            <input type="text" name="name" id="name" class="form-control" value="" />
+                          </div>
+                          <div class="form-group">
+                            <button class="btn btn-primary" name="update" value="">save</button>
+                            <!-- <a href="index.php?ctrl=product" class="btn btn-danger">List</a> -->
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Edit Modal -->
+                <div id="editForm" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">CATEGORY EDIT</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="form-edit-product" action="" method="post" enctype="multipart/form-data">
+                          <div class="form-group">
+                            <label for="">Product id</label>
+                            <input type="text" readonly name="idCategory" id="idCategory" class="form-control" value="" />
+                          </div>
+                          <div class="form-group">
+                            <label for="">Product's name</label>
+                            <input type="text" name="name" id="nameCategory" class="form-control" value="" />
+                          </div>
+                          <div class="form-group">
+                            <button class="btn btn-primary" name="update" value="">save</button>
+                            <!-- <a href="index.php?ctrl=product" class="btn btn-danger">List</a> -->
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
               <div class="col-auto">
                 <a href="" type="submit" class="btn btn-primary mb-2">Delete</a>
               </div>
             </div>
-            <table class="table table-striped mt-2">
+            <table class="table table-striped mt-2" id="listCategory">
               <thead class="thead-dark">
                 <tr>
                   <th scope="col">Checked</th>
@@ -343,7 +412,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <!-- <tr>
                   <th scope="row"><input type="checkbox" name="acs" id=""></th>
                   <th scope="row">1</th>
                   <td scope="row">Cosmetics</td>
@@ -377,12 +446,11 @@
                   <td scope="row">Cosmetics</td>
                   <td><a href="edit-category.html" type="button" class="btn btn-primary"><i class="far fa-edit"></i></a></td>
                   <td><a href="" type="button" class="btn btn-primary"><i class="far fa-trash-alt"></i></a></td>
-                </tr>
+                </tr> -->
                 
               </tbody>
             </table>
           </div>
-          <!-- Row -->
           <!-- More Documentations Link -->
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -441,6 +509,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/ruang-admin.min.js"></script>
+  <script src="js/category.js"></script>
 </body>
 
 </html>
