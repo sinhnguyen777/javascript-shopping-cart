@@ -2,121 +2,119 @@
   "products": [
     {
       "id": 1,
-      "name": "Ellie Cosmetics Brush",
-      "img": "sp1.png",
-      "price": 19,
-      "price_sale": 3,
-      "id_catalog": 1,
-      "quantity" : 0
-    },
-    {
-      "id": 2,
       "name": "Cosmetic Branding Cream",
       "img": "sp2.png",
       "price": 30,
       "price_sale": 35,
       "id_catalog": 1,
-      "quantity" : 0
+      "quantity": 0
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "Liquid Container Green",
       "img": "sp3.png",
       "price": 12,
       "price_sale": 18,
       "id_catalog": 2,
-      "quantity" : 0
+      "quantity": 0
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Ellie Bath Salt",
       "img": "sp4.png",
       "price": 12,
       "price_sale": 15,
       "id_catalog": 2,
-      "quantity" : 0
+      "quantity": 0
     },
     {
-      "id": 5,
+      "id": 4,
       "name": "Ellie Deodorant Spray",
       "img": "sp5.png",
       "price": 3,
       "price_sale": 5,
       "id_catalog": 2,
-      "quantity" : 0
+      "quantity": 0
     },
     {
-      "id": 6,
+      "id": 5,
       "name": "Ellie Cream Soap",
       "img": "sp6.png",
       "price": 9,
       "price_sale": 13,
       "id_catalog": 2,
-      "quantity" : 0
+      "quantity": 0
     },
     {
-      "id": 7,
+      "id": 6,
       "name": "She Shampoo & Conditionier",
       "img": "sp7.png",
       "price": 35,
       "price_sale": 39,
       "id_catalog": 3,
-      "quantity" : 0
+      "quantity": 0
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "Mockup Cosmetics Set",
       "img": "sp8.png",
       "price": 18,
       "price_sale": 20,
       "id_catalog": 3,
-      "quantity" : 0
-      
+      "quantity": 0
     },
     {
-      "id": 9,
+      "id": 8,
       "name": "Ellie AZ Skin Care",
       "img": "sp10.png",
       "price": 15,
-      "price_sale": 0,
+      "price_sale": 17,
       "id_catalog": 4,
-      "quantity" : 0
+      "quantity": 0
     },
     {
-      "id": 10,
+      "id": 9,
       "name": "Ellie Day & Night Cream",
       "img": "sp13.png",
       "price": 35,
       "price_sale": 0,
       "id_catalog": 4,
-      "quantity" : 0
+      "quantity": 0
     },
     {
-      "id": 11,
+      "id": 10,
       "name": "Ellie Hair Elixir",
       "img": "sp9.png",
       "price": 35,
       "price_sale": 36,
       "id_catalog": 4,
-      "quantity" : 0
+      "quantity": 0
     },
     {
-      "id": 12,
+      "id": 11,
       "name": "Ellie Lotion & Cream",
       "img": "sp11.png",
       "price": 9,
-      "price_sale": 0,
-      "id_catalog": 5,
-      "quantity" : 0
+      "price_sale": 11,
+      "id_catalog": 1,
+      "quantity": 0
     },
     {
-      "id": 13,
-      "name": "Ellie Spa Gif9999",
+      "id": 12,
+      "name": "eeeeeeeeeeee",
       "img": "sp12.png",
-      "price": 20,
-      "price_sale": 22,
-      "id_catalog": 5,
-      "quantity" : 0
+      "price": 13,
+      "price_sale": 15,
+      "id_catalog": 2,
+      "quantity": 0
+    },
+    {
+      "name": "Nguyen Tan Sinh",
+      "price": "55",
+      "price_sale": "66",
+      "img": "https://demo.hasthemes.com/pustok-preview/pustok/image/products/product-8.jpg",
+      "id_caegory": "2",
+      "id": 13
     }
   ],
   "categorys": [
@@ -144,6 +142,5 @@
       "id": 6,
       "name": "Cookbooks"
     }
-    
   ]
 }
