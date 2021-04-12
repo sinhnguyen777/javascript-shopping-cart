@@ -72,7 +72,6 @@ async function getAPI(){
                 cartItem = {
                     [product.name]: product
                 }
-                console.log(cartItem);
             }
             localStorage.setItem("product", JSON.stringify(cartItem));
         }
@@ -86,7 +85,7 @@ async function getAPI(){
                 localStorage.setItem('totalCost', product.price)
             }
         }
-
+        
         onLoadCartNumbers();
         
 }
