@@ -131,8 +131,9 @@
                 aria-labelledby="searchDropdown">
                 <form class="navbar-search">
                   <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
-                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
+                    <input type="text" class="form-control bg-light border-1 small"
+                      placeholder="What do you want to look for?" aria-label="Search" aria-describedby="basic-addon2"
+                      style="border-color: #3f51b5;">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button">
                         <i class="fas fa-search fa-sm"></i>
@@ -318,80 +319,94 @@
             <div class="container">
 
               <h3 class="d-flex justify-content-center m-0 pb-3 text-primary font-weight-bold">Product ( Sản phẩm )</h3>
-                <div class="form-row align-items-center">
-                  <div class="col-auto">
-                    <a href="#" class="btn btn-primary mb-2" onclick="selectAll()">select All</a>
-                  </div>
-                  <div class="col-auto">
-                    <a href="#" class="btn btn-primary mb-2" onclick="UnselectAll()">UnSelect All</a>
-                  </div>
-                  <div class="col-auto">
-                    <a href="add-product.html" class="btn btn-primary mb-2">Add New</a>
-                  </div>
-                  <div class="col-auto">
-                    <a href="" type="submit" class="btn btn-primary mb-2">Delete</a>
-                  </div>
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <a href="#" class="btn btn-primary mb-2" onclick="selectAll()">select All</a>
                 </div>
-      
-              <table class="table table-striped mt-2">
+                <div class="col-auto">
+                  <a href="#" class="btn btn-primary mb-2" onclick="UnselectAll()">UnSelect All</a>
+                </div>
+                <div class="col-auto">
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary m-0 mb-2" data-toggle="modal"
+                    data-target="#exampleModal">
+                    Add New
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">PRODUCT ADD</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="form-add-product" action="" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <label for="">Product id</label>
+                              <input type="text" readonly name="idProduct" id="idProduct" class="form-control" value="" />
+                            </div>
+                            <div class="form-group">
+                              <label for="">Product's name</label>
+                              <input type="text" name="name" id="name" class="form-control" value="" />
+                            </div>
+                            <div class="form-group">
+                              <label for="">Price product</label>
+                              <input type="text" name="price" id="price" class="form-control" value="" />
+                            </div>
+                            <div class="form-group">
+                              <label for="">Price sale</label>
+                              <input type="text" name="price_sale" id="price_sale" class="form-control" value="" />
+                            </div>
+                            <div class="form-group">
+                              <label for="">Image product</label>
+                              <input type="text" name="image" id="image" class="form-control" value="" />
+                            </div>
+                            <div class="form-group">
+                              <label for="">Category</label>
+                              <select class="custom-select" id="listCategory">
+
+                                
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <input type="hidden" name="id" id="id" value="0"> 
+                            </div>
+                            <div class="form-group">
+                              <button type="button" class="btn btn-primary" name="update" value="" onclick="submitForm()">save</button>
+                              <!-- <a href="index.php?ctrl=product" class="btn btn-danger">List</a> -->
+                            </div>
+
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+
+              <table class="table table-striped mt-2"  id="listProduct">
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col">Checked</th>
                     <th scope="col">id</th>
                     <th scope="col">name</th>
                     <th scope="col">price</th>
+                    <th scope="col">price_sale</th>
                     <th scope="col">image</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
-                    
+
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row"><input type="checkbox" name="acs" id=""></th>
-                    <th scope="row">1</th>
-                    <td scope="row">Ellie Cosmetics Brush</td>
-                    <td scope="row">£30.00</td>
-                    <td><img src="../../public/images/sp2.png" alt="" width="50px"></td>
-                    <td><a href="edit-product.html" type="button" class="btn btn-primary"><i class="far fa-edit"></i></a></td>
-                    <td><a href="" type="button" class="btn btn-primary"><i class="far fa-trash-alt"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><input type="checkbox" name="acs" id=""></th>
-                    <th scope="row">1</th>
-                    <td scope="row">Ellie Cosmetics Brush</td>
-                    <td scope="row">£30.00</td>
-                    <td><img src="../../public/images/sp2.png" alt="" width="50px"></td>
-                    <td><a href="edit-product.html" type="button" class="btn btn-primary"><i class="far fa-edit"></i></a></td>
-                    <td><a href="" type="button" class="btn btn-primary"><i class="far fa-trash-alt"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><input type="checkbox" name="acs" id=""></th>
-                    <th scope="row">1</th>
-                    <td scope="row">Ellie Cosmetics Brush</td>
-                    <td scope="row">£30.00</td>
-                    <td><img src="../../public/images/sp2.png" alt="" width="50px"></td>
-                    <td><a href="edit-product.html" type="button" class="btn btn-primary"><i class="far fa-edit"></i></a></td>
-                    <td><a href="" type="button" class="btn btn-primary"><i class="far fa-trash-alt"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><input type="checkbox" name="acs" id=""></th>
-                    <th scope="row">1</th>
-                    <td scope="row">Ellie Cosmetics Brush</td>
-                    <td scope="row">£30.00</td>
-                    <td><img src="../../public/images/sp2.png" alt="" width="50px"></td>
-                    <td><a href="edit-product.html" type="button" class="btn btn-primary"><i class="far fa-edit"></i></a></td>
-                    <td><a href="" type="button" class="btn btn-primary"><i class="far fa-trash-alt"></i></a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><input type="checkbox" name="acs" id=""></th>
-                    <th scope="row">1</th>
-                    <td scope="row">Ellie Cosmetics Brush</td>
-                    <td scope="row">£30.00</td>
-                    <td><img src="../../public/images/sp2.png" alt="" width="50px"></td>
-                    <td><a href="edit-product.html" type="button" class="btn btn-primary"><i class="far fa-edit"></i></a></td>
-                    <td><a href="" type="button" class="btn btn-primary"><i class="far fa-trash-alt"></i></a></td>
-                  </tr>
+                  
                 </tbody>
               </table>
             </div>
@@ -438,7 +453,8 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
+            <span>copyright &copy;
+              <script> document.write(new Date().getFullYear());</script> - developed by
               <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
             </span>
           </div>
@@ -457,6 +473,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/ruang-admin.min.js"></script>
+  <script src="js/product.js"></script>
 
 </body>
 
