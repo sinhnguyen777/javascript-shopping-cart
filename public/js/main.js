@@ -40,14 +40,33 @@ $(document).ready(function(){
 //     last_scroll = present_scroll;
 // });
 
-
-
-
                 
-                // get.forEach((index, item) => {
-                //     if (product.id == index.id) {
-                //         product.quantity = index.quantity + 1
+// get.forEach((index, item) => {
+//     if (product.id == index.id) {
+//         product.quantity = index.quantity + 1
 
-                //     }
-                // })
-                // listCart = JSON.parse(localStorage.getItem('product'))
+//     }
+// })
+// listCart = JSON.parse(localStorage.getItem('product'))
+
+
+
+// =================
+// var cartItem = localStorage.getItem("product");
+// cartItem = JSON.parse(cartItem)
+
+// if (cartItem != null) {
+//     if (cartItem[product.name] == undefined) {
+//         cartItem = {
+//             ...cartItem,
+//             [product.name]: product
+//         }
+//     }
+//     cartItem[product.name].quantity +=1;
+// } else {
+//     product.quantity = 1
+//     cartItem = {
+//         [product.name]: product
+//     }
+// }
+// localStorage.setItem("product", JSON.stringify(cartItem));

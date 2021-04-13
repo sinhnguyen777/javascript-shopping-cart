@@ -76,27 +76,6 @@ async function getAPI() {
             }
             localStorage.setItem("product", JSON.stringify(get))
         }
-
-
-        // =================
-        // var cartItem = localStorage.getItem("product");
-        // cartItem = JSON.parse(cartItem)
-
-        // if (cartItem != null) {
-        //     if (cartItem[product.name] == undefined) {
-        //         cartItem = {
-        //             ...cartItem,
-        //             [product.name]: product
-        //         }
-        //     }
-        //     cartItem[product.name].quantity +=1;
-        // } else {
-        //     product.quantity = 1
-        //     cartItem = {
-        //         [product.name]: product
-        //     }
-        // }
-        // localStorage.setItem("product", JSON.stringify(cartItem));
     }
 
     function tolalCost(product) {

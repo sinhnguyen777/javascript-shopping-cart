@@ -85,7 +85,9 @@ function displayCart() {
                     <td>£${item.price}.00</td>
                     <td>
                         <div class="quatily-cart">
+                            <button class="btn-productdetail border m-0 bg-light">-</button>
                             <input type="number" name="" id="" placeholder="${item.quantity}">
+                            <button class="btn-productdetail border m-0 bg-light">+</button>
                         </div>
                     </td>
                     <td>£${totalCart}.00</td>
