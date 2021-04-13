@@ -75,7 +75,7 @@ function displayCart() {
             }
             productContainer.innerHTML += `
                 <tr>
-                    <td><a href=""><i class="far fa-times-circle text-danger"></i></a></td>
+                    <td><button class="btn btnDeleteCart" onclick="deleteCart(${item.id})"><i class="far fa-times-circle text-danger"></i></button></td>
                     <td>
                         <div class="img-sp-cart">
                             <img src="public/images/${item.img}" alt="">
@@ -83,16 +83,17 @@ function displayCart() {
                     </td>
                     <td>${item.name}</td>
                     <td>£${item.price}.00</td>
-                    <td>
-                        <div class="quatily-cart">
-                            <button class="btn-productdetail border m-0 bg-light">-</button>
-                            <input type="number" name="" id="" placeholder="${item.quantity}">
-                            <button class="btn-productdetail border m-0 bg-light">+</button>
+                    <td class="">
+                        <div class="quatily-cart pt-4">
+                            <button class="btn btn-light border btn-outline-secondary" type="button">-</button>
+                            <input type="text" readonly class="form-control bg-light" placeholder="${item.quantity}">
+                            <button class="btn btn-light border btn-outline-secondary" type="button">+</button>
                         </div>
                     </td>
                     <td>£${totalCart}.00</td>
                 </tr>
             `;
+
         })
     } else {
         productContainer.innerHTML = `
@@ -105,6 +106,11 @@ function displayCart() {
     }
     if (cartItems && productToltals) {
         
+        var quantityCart = 0
+        var tong = cartItems.reduce(function(accumulator, currentValue){
+            var sl = accumulator + currentValue.quantity
+            return sl
+        }, quantityCart)
         productToltals.innerHTML = `
         <tbody>
             <tr class="p-3">
@@ -116,7 +122,7 @@ function displayCart() {
             <tr>
                 <td>THE NUMBER OF PRODUCTS</td>
                 <td>
-                    <span class="float-right">0</span>
+                    <span class="float-right">${tong}</span>
                 </td>
             </tr>
             <tr>
@@ -156,3 +162,18 @@ function displayCart() {
 }
 
 displayCart();
+
+function deleteCart(id){
+    let getCartStorage = JSON.parse(localStorage.getItem('product'))
+    let getCartNumbers = JSON.parse(localStorage.getItem('cartNumbers'))
+    let number = getCartNumbers - 1
+
+    getCartStorage = getCartStorage.filter((value, index) => value.id != id)
+    localStorage.setItem('product', JSON.stringify(getCartStorage))
+    localStorage.setItem('cartNumbers', JSON.stringify(number))
+    document.querySelector("#itemCartSpan").textContent = localStorage.getItem('cartNumbers')
+    displayCart()
+    // showCartLocal()
+}
+
+
