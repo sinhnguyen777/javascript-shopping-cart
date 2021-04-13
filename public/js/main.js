@@ -41,3 +41,13 @@ $(document).ready(function(){
 // });
 
 
+
+
+                
+                // get.forEach((index, item) => {
+                //     if (product.id == index.id) {
+                //         product.quantity = index.quantity + 1
+
+                //     }
+                // })
+                // listCart = JSON.parse(localStorage.getItem('product'))

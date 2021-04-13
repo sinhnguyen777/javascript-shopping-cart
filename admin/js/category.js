@@ -19,7 +19,7 @@ const renderProducts = (category) => {
         <th scope="row"><input type="checkbox" name="acs" id=""></th>
         <th scope="row">${category.id}</th>
         <td scope="row">${category.name}</td>
-        <td><button type="button" class=" btn-edit btn-primary"><i class="far fa-edit"></i></button></td>
+        <td><button type="button" class=" btn-edit btn btn-primary"><i class="far fa-edit"></i></button></td>
         <td><button type="button" class="btn-delete btn btn-primary"><i class="far fa-trash-alt"></i></button></td>
     </tr>
     `

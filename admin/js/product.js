@@ -118,13 +118,15 @@ const showProducts = data => {
 }
 
 const addProduct = async () => {
+    let urlImg = document.getElementById('image').value
     const data = {
         name: document.getElementById('name').value,
         price: document.getElementById('price').value,
         price_sale: document.getElementById('price_sale').value,
-        img: document.getElementById('image').value,
+        img: urlImg.substr(12),
         id_caegory: document.querySelector('#listCategory').value
     }
+    console.log(data.img);
     const productsUrl = url + 'products'
     const option = {
         method: 'POST', 
@@ -134,6 +136,7 @@ const addProduct = async () => {
         body: JSON.stringify(data)
     }
     const res = await fetchApi(productsUrl, option)
+    console.log(urlImg);
     showAddedProduct(res)
     clearForm()
 }
@@ -142,7 +145,7 @@ const showAddedProduct = product => {
     let pro = document.getElementById('listProduct')
     pro.innerHTML = ''
     product.forEach((index, item) => {
-        console.log(index.img);
+        console.log(index);;
         pro.innerHTML += `
         <tr data-id="${index.id}">
             <th scope="row"><input type="checkbox" name="acs" id=""></th>
@@ -168,11 +171,13 @@ const showAddedProduct = product => {
 
 
 const editProduct = async (id) => {
+    let urlImg = document.getElementById('image').value
+
     const data = {
         name: document.getElementById('name').value,
         price: document.getElementById('price').value,
         price_sale: document.getElementById('price_sale').value,
-        img: document.getElementById('image').value,
+        img: urlImg.substr(12),
         id_caegory: document.querySelector('#listCategory').value
     }
     const productsUrl = url + 'products/' + id
@@ -206,6 +211,17 @@ const submitForm = async () => {
     } else {
         await editProduct(id)
     }
+
+    let nameProduct = document.getElementById('name').value
+    let priceProduct = document.getElementById('price').value
+    let price_saleProduct = document.getElementById('price_sale').value
+    let imgProduct = document.getElementById('image').value
+    let listCategory = document.getElementById('listCategory').value
+
+    if(nameProduct == '' && priceProduct == '' && price_saleProduct == '' && imgProduct == '' && listCategory == ''){
+        console.log('err');
+    }
+
 }
 
 const getEdit = async (id) => {

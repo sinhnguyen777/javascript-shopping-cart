@@ -7,7 +7,7 @@
       "price": 30,
       "price_sale": 35,
       "id_catalog": 1,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "price": 12,
       "price_sale": 18,
       "id_catalog": 2,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "price": 12,
       "price_sale": 15,
       "id_catalog": 2,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "price": 3,
       "price_sale": 5,
       "id_catalog": 2,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "price": 9,
       "price_sale": 13,
       "id_catalog": 2,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "price": 35,
       "price_sale": 39,
       "id_catalog": 3,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "price": 18,
       "price_sale": 20,
       "id_catalog": 3,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "price": 15,
       "price_sale": 17,
       "id_catalog": 4,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 9,
@@ -79,7 +79,7 @@
       "price": 35,
       "price_sale": 0,
       "id_catalog": 4,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 10,
@@ -88,7 +88,7 @@
       "price": 35,
       "price_sale": 36,
       "id_catalog": 4,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 11,
@@ -97,7 +97,7 @@
       "price": 9,
       "price_sale": 11,
       "id_catalog": 1,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 12,
@@ -106,39 +106,16 @@
       "price": 13,
       "price_sale": 15,
       "id_catalog": 2,
-      "quantity": 0
+      "quantity": 1
     },
     {
-      "name": "Nguyen Tan Sinh",
-      "price": "55",
-      "price_sale": "66",
-      "img": "https://demo.hasthemes.com/pustok-preview/pustok/image/products/product-8.jpg",
-      "id_caegory": "2",
-      "id": 13
-    },
-    {
-      "name": "eeeee1111",
-      "id": 14
-    },
-    {
-      "name": "aaaaa",
+      "name": "tasjhba",
+      "price": "33",
+      "price_sale": "22",
+      "img": "casual-curly-curly-hair-794064__.png",
+      "id_caegory": "1",
+      "quantity": 1,
       "id": 15
-    },
-    {
-      "name": "eeeee",
-      "id": 16
-    },
-    {
-      "name": "Nguyễn Tấn Sinh",
-      "id": 17
-    },
-    {
-      "name": "444",
-      "id": 18
-    },
-    {
-      "name": {},
-      "id": 19
     }
   ],
   "categorys": [
@@ -169,10 +146,6 @@
     {
       "id": 7,
       "name": "ahssssssss"
-    },
-    {
-      "name": "ooooajsbn",
-      "id": 8
     }
   ]
 }
