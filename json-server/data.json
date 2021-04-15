@@ -13,8 +13,8 @@
       "id": 2,
       "name": "Liquid Container Green",
       "img": "sp3.png",
-      "price": 12,
-      "price_sale": 18,
+      "price": 10,
+      "price_sale": 12,
       "id_catalog": 2,
       "quantity": 1
     },
@@ -22,8 +22,8 @@
       "id": 3,
       "name": "Ellie Bath Salt",
       "img": "sp4.png",
-      "price": 12,
-      "price_sale": 15,
+      "price": 10,
+      "price_sale": 5,
       "id_catalog": 2,
       "quantity": 1
     },
@@ -40,8 +40,8 @@
       "id": 5,
       "name": "Ellie Cream Soap",
       "img": "sp6.png",
-      "price": 9,
-      "price_sale": 13,
+      "price": 5,
+      "price_sale": 10,
       "id_catalog": 2,
       "quantity": 1
     },
@@ -49,8 +49,8 @@
       "id": 6,
       "name": "She Shampoo & Conditionier",
       "img": "sp7.png",
-      "price": 35,
-      "price_sale": 39,
+      "price": 20,
+      "price_sale": 20,
       "id_catalog": 3,
       "quantity": 1
     },
@@ -68,7 +68,7 @@
       "name": "Ellie AZ Skin Care",
       "img": "sp10.png",
       "price": 15,
-      "price_sale": 17,
+      "price_sale": 40,
       "id_catalog": 4,
       "quantity": 1
     },
@@ -147,5 +147,8 @@
       "id": 7,
       "name": "ahssssssss"
     }
+  ],
+  "oder": [
+    
   ]
 }
