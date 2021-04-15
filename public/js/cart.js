@@ -23,9 +23,9 @@ function displayCart() {
                     <td>£${item.price}.00</td>
                     <td class="">
                         <div class="quatily-cart pt-4">
-                            <button class="btn btn-light border btn-outline-secondary" type="button">-</button>
+                            <button onclick="giam(${item.id})" class="btn btn-light border btn-outline-secondary" type="button">-</button>
                             <input type="text" readonly class="form-control bg-light" placeholder="${item.quantity}">
-                            <button class="btn btn-light border btn-outline-secondary" type="button">+</button>
+                            <button onclick="tang(${item.id})" class="btn btn-light border btn-outline-secondary" type="button">+</button>
                         </div>
                     </td>
                     <td>£${totalCart}.00</td>
@@ -96,7 +96,6 @@ function displayCart() {
         </tbody>
         `
     }
-
 }
 
 displayCart();
@@ -119,6 +118,75 @@ function deleteCart(id) {
     let number = getCartNumbers - 1
     localStorage.setItem('cartNumbers', JSON.stringify(number))
     document.querySelector("#itemCartSpan").textContent = localStorage.getItem('cartNumbers')
+    displayCart()
+}
+
+function giam(id) {
+    let productStorage = JSON.parse(localStorage.getItem('product'))
+    let arrCart = []
+    let sl = 0
+    for (let i = 0; i < productStorage.length; i++) {
+
+        if (productStorage[i].id === id) {
+             sl = productStorage[i].quantity - 1
+        }else{
+            sl = productStorage[i].quantity
+        }
+        let slgiam = {
+            id: productStorage[i].id,
+            name: productStorage[i].name,
+            img: productStorage[i].img,
+            price: productStorage[i].price,
+            price_sale: productStorage[i].price_sale,
+            quantity: sl
+        }
+        arrCart.push(slgiam)
+        
+        localStorage.setItem('product', JSON.stringify(arrCart))
+    }
+    let getCartStorage = JSON.parse(localStorage.getItem('product'))
+    let tt = 0
+    getCartStorage.forEach((item) => {
+        if (item.quantity > 0) {
+            var totalCart = item.price * item.quantity
+            tt += totalCart
+        }
+    });
+    localStorage.setItem('totalCost', JSON.stringify(tt))
+    displayCart()
+}
+
+function tang(id) {
+    let productStorage = JSON.parse(localStorage.getItem('product'))
+    let arrCart = []
+    let sl = 0
+    for (let i = 0; i < productStorage.length; i++) {
+        if (productStorage[i].id === id) {
+             sl = productStorage[i].quantity + 1
+        }else{
+            sl = productStorage[i].quantity
+        }
+        let slgiam = {
+            id: productStorage[i].id,
+            name: productStorage[i].name,
+            img: productStorage[i].img,
+            price: productStorage[i].price,
+            price_sale: productStorage[i].price_sale,
+            quantity: sl
+        }
+        arrCart.push(slgiam)
+        
+        localStorage.setItem('product', JSON.stringify(arrCart))
+    }
+    let getCartStorage = JSON.parse(localStorage.getItem('product'))
+    let tt = 0
+    getCartStorage.forEach((item) => {
+        if (item.quantity > 0) {
+            var totalCart = item.price * item.quantity
+            tt += totalCart
+        }
+    });
+    localStorage.setItem('totalCost', JSON.stringify(tt))
     displayCart()
 }
 
