@@ -9,7 +9,9 @@ async function getAPI() {
             <div class="col-md-4">
                 <div class="card border-0 w-100" style="width: 18rem;">
                     <div class="img-cart">
+                        <a href="product-detail.html?${index.id}">
                             <img src="../public/images/${index.img}" class="card-img-top" alt="...">
+                        </a>
                         <button class="btn-add" id="btnAddCart">ADD TO CART</button>
                     </div>
                     <div class="sale">
@@ -17,7 +19,7 @@ async function getAPI() {
                     </div>
                     <div class="card-body pl-0 pr-0">
                         <h5 class="card-title">${index.name}</h5>
-                        <p class="price-cart"><span>£${index.price_sale}</span> - £${index.price}</p>
+                        <p class="price-cart"><span>£${index.price_sale}.00</span> - £${index.price}.00</p>
                     </div>
                 </div>
             </div> 
@@ -89,8 +91,6 @@ async function getAPI() {
     }
 
     onLoadCartNumbers();
-
 }
 
 getAPI()
-

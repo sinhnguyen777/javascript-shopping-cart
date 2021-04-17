@@ -1177,4 +1177,14 @@ body {
   color: #fff;
 }
 
+@media all and ( max-width: 480px) {
+  .wrapper .row nav ul{
+    display: none !important;
+  }
+  .wrapper .row nav .logo{
+    padding: 0;
+  } 
+}
+
 /*# sourceMappingURL=style.css.map */
+

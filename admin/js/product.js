@@ -189,7 +189,7 @@ const editProduct = async (id) => {
         body: JSON.stringify(data)
     }
     const res = await fetchApi(productsUrl, option)
-    getProducts()
+    getProduct()
 }
 
 const removeProduct = async (id) => {
@@ -201,11 +201,12 @@ const removeProduct = async (id) => {
         },
     }
     const res = await fetchApi(productsUrl, option)
-    getProducts()
+    getProduct()
 }
 
 const submitForm = async () => {
     let id = document.getElementById('id').value
+    console.log(id);
     if (id == 0) {
         await addProduct()
     } else {

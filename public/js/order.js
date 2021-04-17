@@ -1,7 +1,7 @@
 function totalsCart(){
     const totals = document.querySelector('#totalsCart')
     const get = JSON.parse(localStorage.getItem('totalCost'))
-    totals.innerHTML = `<strong>£${get}.00</strong>`
+    totals.innerHTML = `<strong>£0</strong>`
 }
 totalsCart()
 
@@ -19,7 +19,9 @@ const checkout = async () => {
     const phone = document.querySelector('#phone').value
     const get = JSON.parse(localStorage.getItem('totalCost'))
 
-    var checkName = name != '' && name.length > 6 && name.length < 30
+    var pattenName = /^[a-zA-Z0-9]+$/gm
+
+    var checkName = pattenName.test(name)
     var checkAdderss = address != '' && address.length > 6
     
     var patten = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/gm
