@@ -29,9 +29,13 @@ const checkout = async () => {
 
     var patten2 = /((09|03|07|08|05)+([0-9]{8})\b)/g
     var checkPhone = patten2.test(phone)
-    var currentdate = new Date();
 
-    var datetime = currentdate.getDay() + "/" + currentdate.getMonth() + "/" + currentdate.getFullYear() + "  " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+    var today = new Date()
+    var date = today.getDate() + '/' + (today.getMonth()+1) + '/' + today.getFullYear();
+    var time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    var dateTime = date + ' ' + time
+    console.log(dateTime);
+    // var datetime = currentdate.getDay() + "/" + currentdate.getMonth() + "/" + currentdate.getFullYear() + "  " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
     // check name
     if (name == '') {
         document.getElementById('nameHelp').innerText = 'Nhap ten'
@@ -92,6 +96,7 @@ const checkout = async () => {
         }
         const res = await fetchApi(productsUrl, option)
         postOrderDetail(res.id)
+        window.location = "http://127.0.0.1:5501/index.html"
     }
 
 }
