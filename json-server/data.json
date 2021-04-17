@@ -109,21 +109,28 @@
       "quantity": 1
     },
     {
-      "name": "tasjhba",
-      "price": "33",
+      "name": "Nguyen Tan Sinh",
+      "price": "5000000",
       "price_sale": "22",
-      "img": "casual-curly-curly-hair-794064__.png",
-      "id_caegory": "1",
-      "quantity": 1,
-      "id": 15
+      "img": "fashion_guru.png",
+      "id_caegory": "6",
+      "id": 13
     },
     {
-      "name": "jj",
-      "price": "50",
+      "name": "rrrrrrr",
+      "price": "55",
+      "price_sale": "22",
+      "img": "hoahaiduong.jpg",
+      "id_caegory": "1",
+      "id": 14
+    },
+    {
+      "name": "yyyyyy",
+      "price": "33",
       "price_sale": "22",
       "img": "darkness-windows-10-neon-lights-creative-microsoft.jpg",
-      "id_caegory": "2",
-      "id": 16
+      "id_caegory": "1",
+      "id": 15
     }
   ],
   "categorys": [

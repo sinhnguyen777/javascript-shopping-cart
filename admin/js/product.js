@@ -147,7 +147,7 @@ const showAddedProduct = product => {
     product.forEach((index, item) => {
         console.log(index);;
         pro.innerHTML += `
-        <tr data-id="${index.id}">
+        <tr data-id="${index.id}" >
             <th scope="row"><input type="checkbox" name="acs" id=""></th>
             <th scope="row">${index.id}</th>
             <td scope="row">${index.name}</td>
@@ -202,6 +202,7 @@ const removeProduct = async (id) => {
     }
     const res = await fetchApi(productsUrl, option)
     getProduct()
+    getCategory()
 }
 
 const submitForm = async () => {
@@ -222,6 +223,7 @@ const submitForm = async () => {
     if(nameProduct == '' && priceProduct == '' && price_saleProduct == '' && imgProduct == '' && listCategory == ''){
         console.log('err');
     }
+    getProduct()
 
 }
 
