@@ -155,21 +155,21 @@
                                         <td>PRODUCT</td>
                                         <td class="float-right">TOTAL</td>
                                     </tr>
-                                    <tr>
+                                    <!-- <tr>
                                         <td>Liquid Container Green <strong>x 2</strong></td>
                                         <td class="float-right">£24.00</td>
                                     </tr>
                                     <tr>
                                         <td>SUBTOTAL</td>
                                         <td class="float-right">£24.00</td>
-                                    </tr>
+                                    </tr> -->
                                     <tr>
                                         <td>SHIPPING</td>
                                         <td class="float-right">Local pickup</td>
                                     </tr>
                                     <tr>
                                         <td>TOTAL</td>
-                                        <td class="float-right"><strong>£24.00</strong></td>
+                                        <td class="float-right" id="totalsCart"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -192,50 +192,35 @@
                                     </li>
                                 </ul>
                             </div>
-                            <button type="submit">Proceed to PayPal</button>
+                            
                         </div>
                     </div>
                     <div class="col-md-6 pt-5">
                         <h3>Billing details</h3>
-                        <form class="pt-3 form-checkout">
+                        <form class="pt-3 form-checkout" id="formCheckout">
                             <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="">First name *</label>
-                                    <input type="text" class="form-control" id="">
-                                </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
                                     <label for="">Last name *</label>
-                                    <input type="text" class="form-control" id="">
+                                    <input type="text" name="fullName" class="form-control" id="fullName" required>
+                                    <small id="nameHelp" class="form-text text-danger"></small>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="inputAddress">Street address</label>
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="House number and street name">
+                                    <input type="text" name="address" class="form-control" id="address" placeholder="House number and street name" required>
+                                    <small id="addressHelp" class="form-text text-danger"></small>
                                 </div>
                             </div>
                             
                             <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputCity">City</label>
-                                    <input type="text" class="form-control" id="inputCity">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="inputState">State</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="inputZip">Zip</label>
-                                    <input type="text" class="form-control" id="inputZip">
-                                </div>
                                 <div class="form-group col-md-12">
                                     <label for="">Email</label>
-                                    <input type="email" class="form-control" id="inputAddress" placeholder="">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="" required>
+                                    <small id="emailHelp" class="form-text text-danger"></small>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="">Phone</label>
-                                    <input type="number" class="form-control" id="inputAddress" placeholder="">
+                                    <input type="number" name="phone" class="form-control" id="phone" placeholder="" required>
+                                    <small id="phoneHelp" class="form-text text-danger"></small>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -246,9 +231,9 @@
                                     </label>
                                 </div>
                             </div>
+                            <button type="button" onclick="checkout()" >Proceed to PayPal</button>
                         </form>
                     </div>
-                   
                 </div>
             </div>
         </section>
@@ -301,7 +286,8 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
     <script src="public/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="public/js/order.js"></script>
 
 </body>
-
 </html>

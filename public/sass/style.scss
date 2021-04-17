@@ -1318,6 +1318,19 @@ body {
                     }
                 }
             }
+            
+        }
+
+        form.form-checkout{
+            .form-row{
+                .form-group{
+                    input{
+                        border-radius: 0;
+                        outline: none !important;
+                    }
+                    
+                }
+            }
             button{
                 width: 100%;
                 border-radius: 0;
@@ -1331,18 +1344,6 @@ body {
                 &:hover{
                     background-color: #F5BDB6;
                     color: #fff;
-                }
-            }
-        }
-
-        form.form-checkout{
-            .form-row{
-                .form-group{
-                    input{
-                        border-radius: 0;
-                        outline: none !important;
-                    }
-                    
                 }
             }
         }

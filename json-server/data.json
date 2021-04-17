@@ -148,7 +148,70 @@
       "name": "ahssssssss"
     }
   ],
-  "oder": [
-    
+  "order": [
+    {
+      "name": "Nguyen Tan Sinh",
+      "address": "Quận 12",
+      "email": "sinhntps12801@fpt.edu.vn",
+      "phone": "0963570203",
+      "toltals": 80,
+      "datetime": "6/3/2021  7:35:32",
+      "id": 1
+    },
+    {
+      "name": "Nguyen Tan Sinh",
+      "address": "Quận 12",
+      "email": "anhpro148@gmail.com",
+      "phone": "0963570203",
+      "toltals": 60,
+      "datetime": "6/3/2021  9:20:12",
+      "id": 2
+    },
+    {
+      "name": "Nguyen Tan Sinh",
+      "address": "Quận 12",
+      "email": "anhpro148@gmail.com",
+      "phone": "0963570203",
+      "toltals": 90,
+      "datetime": "6/3/2021  9:23:38",
+      "id": 3
+    }
+  ],
+  "orderDetail": [
+    {
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 2,
+      "unit_price": 30,
+      "id": 1
+    },
+    {
+      "order_id": 1,
+      "product_id": 2,
+      "quantity": 2,
+      "unit_price": 10,
+      "id": 2
+    },
+    {
+      "order_id": 2,
+      "product_id": 1,
+      "quantity": 2,
+      "unit_price": 30,
+      "id": 3
+    },
+    {
+      "order_id": 3,
+      "product_id": 1,
+      "quantity": 2,
+      "unit_price": 30,
+      "id": 4
+    },
+    {
+      "order_id": 3,
+      "product_id": 2,
+      "quantity": 3,
+      "unit_price": 10,
+      "id": 5
+    }
   ]
 }

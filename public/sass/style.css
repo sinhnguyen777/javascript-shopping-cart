@@ -1157,7 +1157,11 @@ body {
   padding-left: 20px;
   top: -20px;
 }
-.wrapper .checkout .card-totals button {
+.wrapper .checkout form.form-checkout .form-row .form-group input {
+  border-radius: 0;
+  outline: none !important;
+}
+.wrapper .checkout form.form-checkout button {
   width: 100%;
   border-radius: 0;
   border: 0;
@@ -1168,13 +1172,9 @@ body {
   font-size: 1em;
   transition: all 0.3s;
 }
-.wrapper .checkout .card-totals button:hover {
+.wrapper .checkout form.form-checkout button:hover {
   background-color: #F5BDB6;
   color: #fff;
-}
-.wrapper .checkout form.form-checkout .form-row .form-group input {
-  border-radius: 0;
-  outline: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
