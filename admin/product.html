@@ -314,7 +314,7 @@
                                         Add New
                                     </button>
 
-                                    <!-- Modal -->
+                                    <!-- Add Modal Form -->
                                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -332,29 +332,78 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="">Product's name</label>
-                                                            <input type="text" name="name" id="name" class="form-control" value="" />
+                                                            <input type="text" name="name" id="name" class="form-control" value="" minlength="4"/>
+                                                            <small id="nameHelp" class="form-text text-danger"></small>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="">Price product</label>
-                                                            <input type="number" name="price" id="price" class="form-control" value="" />
+                                                            <input type="number" name="price" id="price" class="form-control" value=""/>
+                                                            <small id="priceHelp" class="form-text text-danger"></small>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="">Price sale</label>
-                                                            <input type="number" name="price_sale" id="price_sale" class="form-control" value="" />
+                                                            <input type="number" name="price_sale" id="price_sale" class="form-control" value=""/>
+                                                            <small id="priceSaleHelp" class="form-text text-danger"></small>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="">Image product</label>
-                                                            <input type="file" name="image" id="image" class="form-control" value="" />
+                                                            <input type="file" name="image" id="image" class="form-control" value=""/>
+                                                            <small id="imgHelp" class="form-text text-danger"></small>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="">Category</label>
                                                             <select class="custom-select" id="listCategory"> </select>
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="hidden" name="id" id="id" value="0" />
+                                                            <button type="button" class="btn btn-primary" name="update" value="" onclick="submitAdd()">save add</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Edit Modal From -->
+                                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel2">PRODUCT EDIT</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form id="form-edit-product" action="" method="post" enctype="multipart/form-data">
+                                                        <div class="form-group">
+                                                            <label for="">Product id</label>
+                                                            <input type="text" readonly name="idEdit" id="idEdit" class="form-control" value="" />
                                                         </div>
                                                         <div class="form-group">
-                                                            <button type="button" class="btn btn-primary" name="update" value="" onclick="submitForm()">save</button>
+                                                            <label for="">Product's name</label>
+                                                            <input type="text" name="nameEdit" id="nameEdit" class="form-control" value="" />
+                                                            <small id="nameEditHelp" class="form-text text-danger"></small>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Price product</label>
+                                                            <input type="number" name="priceEdit" id="priceEdit" class="form-control" value="" />
+                                                            <small id="priceEditHelp" class="form-text text-danger"></small>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Price sale</label>
+                                                            <input type="number" name="price_saleEdit" id="priceSaleEdit" class="form-control" value="" />
+                                                            <small id="priceSaleEditHelp" class="form-text text-danger"></small>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Image product</label>
+                                                            <input type="file" name="imageEdit" id="imageEdit" class="form-control" value="" />
+                                                            <small id="imgEditHelp" class="form-text text-danger"></small>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Category</label>
+                                                            <select class="custom-select" id="listCategoryEdit"> </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="button" class="btn btn-primary" name="update" onclick="submitEdit()" >save Edit</button>
                                                             <!-- <a href="index.php?ctrl=product" class="btn btn-danger">List</a> -->
                                                         </div>
                                                     </form>
@@ -393,7 +442,7 @@
                                 For more documentations you can visit<a href="https://getbootstrap.com/docs/4.3/components/forms/" target="_blank"> bootstrap forms documentations.</a> and
                                 <a href="https://getbootstrap.com/docs/4.3/components/input-group/" target="_blank">bootstrap input groups documentations</a>
                             </p>
-                        </div>
+                         </div>
                     </div> -->
 
                     <!-- Modal Logout -->
@@ -447,6 +496,6 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/ruang-admin.min.js"></script>
-    <script src="js/product.js"></script>
+    <script src="js/product-copy.js"></script>
 </body>
 </html>

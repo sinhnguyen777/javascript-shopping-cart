@@ -110,26 +110,10 @@
     },
     {
       "name": "Nguyen Tan Sinh",
-      "price": "5000000",
-      "price_sale": "22",
-      "img": "fashion_guru.png",
-      "id_caegory": "6",
-      "id": 13
-    },
-    {
-      "name": "rrrrrrr",
-      "price": "55",
-      "price_sale": "22",
-      "img": "hoahaiduong.jpg",
-      "id_caegory": "1",
-      "id": 14
-    },
-    {
-      "name": "yyyyyy",
-      "price": "33",
-      "price_sale": "22",
-      "img": "darkness-windows-10-neon-lights-creative-microsoft.jpg",
-      "id_caegory": "1",
+      "price": "11",
+      "price_sale": "99",
+      "img": "gradient-coding-logo-template_23-2148809439.jpg",
+      "id_catalog": "2",
       "id": 15
     }
   ],
@@ -159,8 +143,8 @@
       "name": "Cookbooks"
     },
     {
-      "id": 7,
-      "name": "ahssssssss"
+      "name": "99999999",
+      "id": 8
     }
   ],
   "order": [],
