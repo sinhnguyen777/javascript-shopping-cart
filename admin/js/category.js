@@ -48,37 +48,67 @@ const renderProducts = (category) => {
 
 addModelForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    fetch(url + 'categorys',{
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            name: addModelForm.name.value
+    var namecate = document.querySelector('#nameCate').value
+    var pattenName = /^[a-zA-Z]{2,30}[a-zA-Z\ ]*$/igm
+    var resultName = pattenName.test(namecate)
+    if (resultName == false) {
+        document.getElementById('nameAddHelp').innerText = 'Ten khong hop le'
+    } else if(namecate.length > 30){
+        document.getElementById('nameAddHelp').innerText = 'Ten khong duoc qua 30 ky tu'
+    } else {
+        document.getElementById('nameAddHelp').innerText = ''
+    }
+    
+    if (resultName == true) {
+        
+        fetch(url + 'categorys',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: addModelForm.name.value
+            })
         })
-    })
-    .then(res => res.json())
-    .then(data => {
-        const dataArr = []
-        dataArr.push(data)
-        renderProducts(dataArr)
-    })
-    addModelForm.name.value = ''
+        .then(res => res.json())
+        .then(data => {
+            const dataArr = []
+            dataArr.push(data)
+            renderProducts(dataArr)
+        })
+        addModelForm.name.value = ''
+    }
+
 })
 
 editForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    fetch(`${url}categorys/${id}`,{
-        method: 'PATCH',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            name: editForm.name.value
+    var namecate = document.querySelector('#nameCategory').value
+    var pattenName = /^[a-zA-Z]{2,30}[a-zA-Z\ ]*$/igm
+    var resultName = pattenName.test(namecate)
+    if (resultName == false) {
+        document.getElementById('nameEditHelp').innerText = 'Ten khong hop le'
+    } else if(namecate.length > 30){
+        document.getElementById('nameEditHelp').innerText = 'Ten khong duoc qua 30 ky tu'
+    } else {
+        document.getElementById('nameEditHelp').innerText = ''
+    }
+    
+    if (resultName == true) {
+        
+        fetch(`${url}categorys/${id}`,{
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: editForm.name.value
+            })
         })
-    })
-    .then(res => res.json())
-    .then(() => location.reload())
-    editForm.name.value = ''
+        .then(res => res.json())
+        .then(() => location.reload())
+        editForm.name.value = ''
+    }
+
 
 })

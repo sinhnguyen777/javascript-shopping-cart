@@ -73,13 +73,12 @@
       "quantity": 1
     },
     {
-      "id": 9,
-      "name": "Ellie Day & Night Cream",
+      "name": "Ellie Day Night Cream",
+      "price": "35",
+      "price_sale": "39",
       "img": "sp13.png",
-      "price": 35,
-      "price_sale": 0,
-      "id_catalog": 4,
-      "quantity": 1
+      "id_catalog": "4",
+      "id": 9
     },
     {
       "id": 10,
@@ -109,10 +108,10 @@
       "quantity": 1
     },
     {
-      "name": "Nguyen Tan Sinh",
-      "price": "11",
-      "price_sale": "99",
-      "img": "gradient-coding-logo-template_23-2148809439.jpg",
+      "name": "hsh ts lilna",
+      "price": "77",
+      "price_sale": "78",
+      "img": "hoahaiduong.jpg",
       "id_catalog": "2",
       "id": 15
     }
@@ -145,8 +144,78 @@
     {
       "name": "99999999",
       "id": 8
+    },
+    {
+      "name": "asa sda e",
+      "id": 9
     }
   ],
-  "order": [],
-  "orderDetail": []
+  "order": [
+    {
+      "name": "sinhnguyen123",
+      "address": "Hồ Chí Minh",
+      "email": "sinhntps12801@fpt.edu.vn",
+      "phone": "0963570203",
+      "toltals": 48,
+      "status": "Delivered",
+      "dateTime": "20/4/2021 11:44:20",
+      "id": 1
+    },
+    {
+      "name": "thaophuong",
+      "address": "Tân Phú",
+      "email": "thaontpps13536@fpt.edu.vn",
+      "phone": "0921671342",
+      "toltals": 88,
+      "status": "Delivered",
+      "dateTime": "20/4/2021 11:47:47",
+      "id": 2
+    }
+  ],
+  "orderDetail": [
+    {
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 1,
+      "unit_price": 30,
+      "status": "Delivered",
+      "id": 1
+    },
+    {
+      "order_id": 1,
+      "product_id": 2,
+      "quantity": 1,
+      "unit_price": 10,
+      "status": "Delivered",
+      "id": 2
+    },
+    {
+      "order_id": 2,
+      "product_id": 7,
+      "quantity": 1,
+      "unit_price": 18,
+      "id": 3
+    },
+    {
+      "order_id": 2,
+      "product_id": 8,
+      "quantity": 2,
+      "unit_price": 15,
+      "id": 4
+    },
+    {
+      "order_id": 2,
+      "product_id": 10,
+      "quantity": 2,
+      "unit_price": 35,
+      "id": 5
+    },
+    {
+      "order_id": 2,
+      "product_id": 11,
+      "quantity": 2,
+      "unit_price": 9,
+      "id": 6
+    }
+  ]
 }

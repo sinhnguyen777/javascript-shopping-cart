@@ -346,11 +346,12 @@
                         <form id="form-add-product" action="" method="post" enctype="multipart/form-data">
                           <div class="form-group">
                             <label for="">Product id</label>
-                            <input type="text" readonly name="idCategory" id="idProduct" class="form-control" value="" />
+                            <input type="text" readonly name="idCategory" id="idCate" class="form-control" value="" />
                           </div>
                           <div class="form-group">
                             <label for="">Product's name</label>
-                            <input type="text" name="name" id="name" class="form-control" value="" />
+                            <input type="text" name="name" id="nameCate" class="form-control" value="" />
+                            <small id="nameAddHelp" class="form-text text-danger"></small>
                           </div>
                           <div class="form-group">
                             <button class="btn btn-primary" name="update" value="">save</button>
@@ -382,6 +383,7 @@
                           <div class="form-group">
                             <label for="">Product's name</label>
                             <input type="text" name="name" id="nameCategory" class="form-control" value="" />
+                            <small id="nameEditHelp" class="form-text text-danger"></small>
                           </div>
                           <div class="form-group">
                             <button class="btn btn-primary" name="update" value="">save</button>

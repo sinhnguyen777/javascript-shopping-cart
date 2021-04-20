@@ -84,7 +84,8 @@ const checkout = async () => {
             email: email,
             phone: phone,
             toltals: get,
-            datetime: datetime
+            status: "Delivered",
+            dateTime: dateTime
         }
         const productsUrl = url + 'order'
         const option = {
@@ -96,6 +97,9 @@ const checkout = async () => {
         }
         const res = await fetchApi(productsUrl, option)
         postOrderDetail(res.id)
+        localStorage.removeItem('product')
+        localStorage.removeItem('totalCost')
+        localStorage.removeItem('cartNumbers')
         window.location = "http://127.0.0.1:5501/index.html"
     }
 

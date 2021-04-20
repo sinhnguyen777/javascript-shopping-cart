@@ -61,7 +61,7 @@ const submitAdd = async () => {
     let urlImg = document.getElementById('image').value
 
     //check name
-    var pattenName = /^[a-zA-Z]{4,30}[a-zA-Z\ ]*$/igm
+    var pattenName = /^[a-zA-Z]{2,30}[a-zA-Z\ ]*$/igm
     var resultName = pattenName.test(name)
     if (resultName == false) {
         document.getElementById('nameHelp').innerText = 'Ten khong hop le'
@@ -146,7 +146,7 @@ const editProduct = async (id) => {
     const id_catalog = document.getElementById('listCategoryEdit').value
 
     //check name
-    var pattenName = /^[a-zA-Z]{4,30}[a-zA-Z\ ]*$/igm
+    var pattenName = /^[a-zA-Z]{2,30}[a-zA-Z\ ]*$/igm
     var resultName = pattenName.test(name)
     if (resultName == false) {
         document.getElementById('nameEditHelp').innerText = 'Ten khong hop le'
