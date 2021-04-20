@@ -27,7 +27,82 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
-// Area Chart Example
+
+
+function chart1(data){
+  var toltalsMax = []
+  var thang_1 = 0
+  var thang_2 = 0
+  var thang_3 = 0
+  var thang_4 = 0
+  var thang_5 = 0
+  var thang_6 = 0
+  var thang_7 = 0
+
+  data.forEach(item => {
+    toltalsMax.push(item.toltals)
+    
+    let timeDay = item.dateTime
+    let p = timeDay.slice(0, 9)
+    
+    // var patt = /\d{2}-4/
+    // var result = patt.test(p)
+    // console.log(result);
+
+    let month_1 = /\d{2}-1/
+    let resoult_1 = month_1.test(p)
+    if (resoult_1 == true) {
+        thang_1 += 1
+    }
+
+    let month_2 = /\d{2}-2/
+    let resoult_2 = month_2.test(p)
+
+    if (resoult_2 == true) {
+        thang_2 += 1
+    }
+
+    let month_3 = /\d{2}-3/
+    let resoult_3 = month_3.test(p)
+
+    if (resoult_3 == true) {
+        thang_3 += 1
+    }
+
+
+    let month_4 = /\d{2}-4/
+    let resoult_4 = month_4.test(p)
+
+    if (resoult_4 == true) {
+        thang_4 += 1
+    }
+
+    let month_5 = /\d{2}-5/
+    let resoult_5 = month_5.test(p)
+
+    if (resoult_5 == true) {
+        thang_5 += 1
+    }
+
+    let month_6 = /\d{2}-6/
+    let resoult_6 = month_6.test(p)
+
+    if (resoult_6 == true) {
+        thang_6 += 1
+    }
+
+    let month_7 = /\d{2}-7/
+    let resoult_7 = month_7.test(p)
+
+    if (resoult_7 == true) {
+        thang_7 += 1
+    }
+
+    console.log(thang_4);
+
+  });
+
+  // Area Chart Example
 var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
@@ -116,3 +191,7 @@ var myLineChart = new Chart(ctx, {
     }
   }
 });
+
+
+}
+
