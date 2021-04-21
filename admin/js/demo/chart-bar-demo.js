@@ -50,105 +50,28 @@ const getOrder = async () => {
 getOrder()
 
 function chart1(data) {
-  var p = 0
-  data.forEach(item => {
-    p = item.toltals
-    console.log(p);
-  });
-
-  // Area Chart Example
-  var ctx = document.getElementById("myAreaChart");
-  var myLineChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-      datasets: [{
-        label: "Earnings",
-        lineTension: 0.3,
-        backgroundColor: "rgba(78, 115, 223, 0.5)",
-        borderColor: "rgba(78, 115, 223, 1)",
-        pointRadius: 3,
-        pointBackgroundColor: "rgba(78, 115, 223, 1)",
-        pointBorderColor: "rgba(78, 115, 223, 1)",
-        pointHoverRadius: 3,
-        pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-        pointHoverBorderColor: "rgba(78, 115, 223, 1)",
-        pointHitRadius: 10,
-        pointBorderWidth: 2,
-        data: [0, 10, 50, 15, 10, 20, 15, 25, 20, 30, 25, 40],
-      }],
-    },
-    options: {
-      maintainAspectRatio: false,
-      layout: {
-        padding: {
-          left: 10,
-          right: 25,
-          top: 25,
-          bottom: 0
-        }
-      },
-      scales: {
-        xAxes: [{
-          time: {
-            unit: 'date'
-          },
-          gridLines: {
-            display: false,
-            drawBorder: false
-          },
-          ticks: {
-            maxTicksLimit: 7
-          }
-        }],
-        yAxes: [{
-          ticks: {
-            min: 0,
-            max: 100,
-            maxTicksLimit: 5,
-            padding: 10,
-            // Include a dollar sign in the ticks
-            callback: function (value, index, values) {
-              return number_format(value);
-            }
-          },
-          gridLines: {
-            color: "rgb(234, 236, 244)",
-            zeroLineColor: "rgb(234, 236, 244)",
-            drawBorder: false,
-            borderDash: [2],
-            zeroLineBorderDash: [2]
-          }
-        }],
-      },
-      legend: {
-        display: false
-      },
-      tooltips: {
-        backgroundColor: "rgb(255,255,255)",
-        bodyFontColor: "#858796",
-        titleMarginBottom: 10,
-        titleFontColor: '#6e707e',
-        titleFontSize: 14,
-        borderColor: '#dddfeb',
-        borderWidth: 1,
-        xPadding: 15,
-        yPadding: 15,
-        displayColors: false,
-        intersect: false,
-        mode: 'index',
-        caretPadding: 10,
-        callbacks: {
-          label: function (tooltipItem, chart) {
-            var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-            return datasetLabel + ':  ' + number_format(tooltipItem.yLabel);
-          }
-        }
-      }
+  // var arr = []
+  var max = 0
+  var id
+  var name
+  var email
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].toltals > max) {
+      max = data[i].toltals
+      id = data[i].id
+      name = data[i].name
+      email = data[i].email
     }
-  });
+  }
 
-
+  var ctx = document.getElementById("myAreaChart");
+  ctx.innerHTML = `
+  <p>Username: ${name}</p>
+  <p>Email: ${email}</p>
+  <h3>Toltals: &nbsp; £${max}</h3>
+  `
+  var maxtoltals = document.getElementById('maxtoltals')
+  maxtoltals.innerHTML = `£${max}`
 }
 
 function chart2(data) {
@@ -215,8 +138,11 @@ function chart2(data) {
     if (resoult_7 == true) {
       thang_7 += 1
     }
-
   });
+
+  var arr = [thang_1, thang_2, thang_3, thang_4, thang_5, thang_6, thang_7]
+  var maxArr = Math.max.apply(Math, arr);
+  document.getElementById('lengthOrder').innerHTML = `${maxArr}` 
 
   // Bar Chart Example
   var ctx = document.getElementById("myBarChart");

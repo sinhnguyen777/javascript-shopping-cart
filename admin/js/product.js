@@ -14,6 +14,7 @@ const getProduct = async () => {
     }
     const res = await fetchApi(productsUrl, option)
     showProducts(res)   
+    // searchInput(res)
 }
 
 const getProductById = async (id) => {
@@ -260,3 +261,41 @@ const showCategory = data => {
 
 getProduct()
 getCategory()
+
+// function searchInput(){
+//     let data = [
+//         {
+//             "id": 1,
+//             "name": "Cosmetic Branding Cream",
+//             "img": "sp2.png",
+//             "price": 30,
+//             "price_sale": 35,
+//             "id_catalog": 1,
+//             "quantity": 1
+//           },
+//           {
+//             "id": 2,
+//             "name": "Liquid Container Green",
+//             "img": "sp3.png",
+//             "price": 10,
+//             "price_sale": 12,
+//             "id_catalog": 2,
+//             "quantity": 1
+//           },
+//           {
+//             "id": 3,
+//             "name": "Ellie Bath Salt",
+//             "img": "sp4.png",
+//             "price": 10,
+//             "price_sale": 5,
+//             "id_catalog": 2,
+//             "quantity": 1
+//           }
+//     ]
+//     let el = document.getElementById('searchInput').value
+//     let kq = data.filter(item => 
+//         item.name.toLowerCase().includes(el.toLowerCase()))
+//     console.log(kq);
+// }
+
+// searchInput()

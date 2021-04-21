@@ -156,7 +156,7 @@
       "address": "Quận 12",
       "email": "sinhntps12801@fpt.edu.vn",
       "phone": "0963570203",
-      "toltals": 95,
+      "toltals": 100,
       "status": "Delivered",
       "dateTime": "20-4-2021 15:15:38",
       "id": 1
@@ -166,7 +166,7 @@
       "address": "Hồ Chí Minh",
       "email": "sinhnt990@gmail.com",
       "phone": "0832973236",
-      "toltals": 108,
+      "toltals": 199,
       "status": "Delivered",
       "dateTime": "20-3-2021 15:16:25",
       "id": 2
@@ -228,8 +228,17 @@
   ],
   "users": [
     {
+      "id": 1,
       "email": "sinhnt990@gmail.com",
       "password": "12345"
+    }
+  ],
+  "comment": [
+    {
+      "id": 1,
+      "idUser": 1,
+      "idProduct": 1,
+      "description": "ok"
     }
   ]
 }
