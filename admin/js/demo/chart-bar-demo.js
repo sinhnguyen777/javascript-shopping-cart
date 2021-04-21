@@ -152,7 +152,7 @@ function chart1(data) {
 }
 
 function chart2(data) {
-  var toltalsMax = []
+  // var toltalsMax = []
   var thang_1 = 0
   var thang_2 = 0
   var thang_3 = 0
@@ -162,7 +162,7 @@ function chart2(data) {
   var thang_7 = 0
 
   data.forEach(item => {
-    toltalsMax.push(item.toltals)
+    // toltalsMax.push(item.toltals)
 
     let timeDay = item.dateTime
     let p = timeDay.slice(0, 9)

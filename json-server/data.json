@@ -225,5 +225,11 @@
       "unit_price": 10,
       "id": 6
     }
+  ],
+  "users": [
+    {
+      "email": "sinhnt990@gmail.com",
+      "password": "12345"
+    }
   ]
 }
