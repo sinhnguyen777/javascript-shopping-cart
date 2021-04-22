@@ -29,11 +29,31 @@ const renderProducts = (category) => {
     const btndelete = document.querySelector(`[data-id = '${category.id}']  .btn-delete`)
 
     btndelete.addEventListener('click', (e) => {
-        fetch(url + 'categorys/' + `${category.id}`, {
-            method: 'DELETE'
+
+        e.preventDefault()
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success',
+                fetch(url + 'categorys/' + `${category.id}`, {
+                    method: 'DELETE'
+                })
+                .then(res => res.json())
+                .then(() => location.reload())
+              )
+            }
         })
-        .then(res => res.json())
-        .then(() => location.reload())
     })
 
     const edit = document.querySelector(`[data-id = '${category.id}'] .btn-edit`)
@@ -112,3 +132,34 @@ editForm.addEventListener('submit', (e) => {
 
 
 })
+
+
+
+async function fetchApiSearch(){
+    const urlOption = url + 'categorys'
+    const res = await fetch(urlOption)
+    const data = await res.json()
+
+    var searchInput = document.getElementById('searchInput')
+
+    var categorySearch = document.getElementById('listCata')
+
+    searchInput.onkeyup = function(){
+        var kq = data.filter(item => item.name.toLowerCase().includes(searchInput.value.toLowerCase()))
+        categorySearch.innerHTML = ''
+
+        kq.forEach(item => {
+            categorySearch.innerHTML += `
+            <tr  data-id="${item.id}">
+                <th scope="row"><input type="checkbox" name="acs" id=""></th>
+                <th scope="row">${item.id}</th>
+                <td scope="row">${item.name}</td>
+                <td><button type="button" class=" btn-edit btn btn-primary"><i class="far fa-edit"></i></button></td>
+                <td><button type="button" class="btn-delete btn btn-primary"><i class="far fa-trash-alt"></i></button></td>
+            </tr>
+            `
+        })
+    }
+}
+
+fetchApiSearch()

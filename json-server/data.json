@@ -108,12 +108,12 @@
       "quantity": 1
     },
     {
-      "name": "hsh ts lilna",
-      "price": "77",
-      "price_sale": "78",
-      "img": "hoahaiduong.jpg",
-      "id_catalog": "2",
-      "id": 15
+      "name": "eeeass aa dfb",
+      "price": 54,
+      "price_sale": 55,
+      "img": "casual-curly-curly-hair-794064__.png",
+      "id_catalog": 10,
+      "id": 13
     }
   ],
   "categorys": [
@@ -148,6 +148,18 @@
     {
       "name": "asa sda e",
       "id": 9
+    },
+    {
+      "name": "sinhnguyen",
+      "id": 10
+    },
+    {
+      "name": "thuan pro",
+      "id": 12
+    },
+    {
+      "name": "catalog",
+      "id": 13
     }
   ],
   "order": [
@@ -156,7 +168,7 @@
       "address": "Quận 12",
       "email": "sinhntps12801@fpt.edu.vn",
       "phone": "0963570203",
-      "toltals": 100,
+      "toltals": 10,
       "status": "Delivered",
       "dateTime": "20-4-2021 15:15:38",
       "id": 1
@@ -166,7 +178,7 @@
       "address": "Hồ Chí Minh",
       "email": "sinhnt990@gmail.com",
       "phone": "0832973236",
-      "toltals": 199,
+      "toltals": 72,
       "status": "Delivered",
       "dateTime": "20-3-2021 15:16:25",
       "id": 2
@@ -180,6 +192,36 @@
       "status": "Delivered",
       "dateTime": "20-4-2021 15:17:28",
       "id": 3
+    },
+    {
+      "name": "aaabbbccc",
+      "address": "sai gon",
+      "email": "abc123@gmail.com",
+      "phone": "0923777888",
+      "toltals": 65,
+      "status": "Delivered",
+      "dateTime": "22-4-2021 13:30:24",
+      "id": 4
+    },
+    {
+      "name": "tthsaad",
+      "address": "adad adb ss",
+      "email": "anhpro148@gmail.com",
+      "phone": "0977433888",
+      "toltals": 84,
+      "status": "Delivered",
+      "dateTime": "22-4-2021 13:31:35",
+      "id": 5
+    },
+    {
+      "name": "ddaass",
+      "address": "Quận 12",
+      "email": "dd23das@gmail.com",
+      "phone": "0963570203",
+      "toltals": 50,
+      "status": "Delivered",
+      "dateTime": "22-4-2021 13:48:42",
+      "id": 6
     }
   ],
   "orderDetail": [
@@ -224,6 +266,27 @@
       "quantity": 1,
       "unit_price": 10,
       "id": 6
+    },
+    {
+      "order_id": 4,
+      "product_id": 1,
+      "quantity": 1,
+      "unit_price": 30,
+      "id": 7
+    },
+    {
+      "order_id": 6,
+      "product_id": 1,
+      "quantity": 1,
+      "unit_price": 30,
+      "id": 8
+    },
+    {
+      "order_id": 6,
+      "product_id": 2,
+      "quantity": 2,
+      "unit_price": 10,
+      "id": 9
     }
   ],
   "users": [

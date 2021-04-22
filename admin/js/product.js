@@ -13,8 +13,8 @@ const getProduct = async () => {
         },
     }
     const res = await fetchApi(productsUrl, option)
-    showProducts(res)   
-    // searchInput(res)
+    showProducts(res)
+    
 }
 
 const getProductById = async (id) => {
@@ -124,7 +124,6 @@ const submitAdd = async () => {
     }
 }
 
-
 const getEdit = async (id) => {
     const product = await getProductById(id)
     document.getElementById('idEdit').value = product.id
@@ -210,20 +209,33 @@ const editProduct = async (id) => {
 }
 
 const removeProduct = async (id) => {
-    const productsUrl = url + 'products/' + id
-    const option = {
-        method: 'DELETE', 
-        headers: {
-        'Content-Type': 'application/json'
-        },
-    }
-    const res = await fetchApi(productsUrl, option)
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success',
+            fetch(url + 'products/' + id, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(() => location.reload())
+            
+          )
+        }
+    })
+
     getProduct()
     getCategory()
 }
-
-
-
 
 const getCategory = async () => {
     const productsUrl = url + 'categorys'
@@ -259,43 +271,52 @@ const showCategory = data => {
     })
 }
 
+
+async function fetchApiSearch(){
+    const urlOption = url + 'products'
+    const res = await fetch(urlOption)
+    const data = await res.json()
+
+    var searchInput = document.getElementById('searchInput')
+
+    var productSearch = document.getElementById('listProduct')
+
+    searchInput.onkeyup = function(){
+        var kq = data.filter(item => item.name.toLowerCase().includes(searchInput.value.toLowerCase()))
+        productSearch.innerHTML = ''
+
+        kq.forEach(index => {
+            productSearch.innerHTML += `
+            <tr data-id="${index.id}">
+                <th scope="row"><input type="checkbox" name="acs" id=""></th>
+                <th scope="row">${index.id}</th>
+                <td scope="row">${index.name}</td>
+                <td scope="row">£${index.price}.00</td>
+                <td scope="row">£${index.price_sale}.00</td>
+                <td><img src="../../public/images/${index.img}" alt="" width="50px"></td>
+                <td>
+                    <button type="button" onclick="getEdit(${index.id})" class="btn-edit btn btn-primary text-light" data-toggle="modal" data-target="#exampleModal2">
+                        <i class="far fa-edit"></i>
+                    </button>
+                </td>
+                <td>
+                    <button type="button" onclick="removeProduct(${index.id})" class="btn-delete btn btn-primary text-light" >
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </td>
+            </tr>
+            `
+        })
+    }
+
+
+
+}
+
+fetchApiSearch()
+
+
+
 getProduct()
 getCategory()
 
-// function searchInput(){
-//     let data = [
-//         {
-//             "id": 1,
-//             "name": "Cosmetic Branding Cream",
-//             "img": "sp2.png",
-//             "price": 30,
-//             "price_sale": 35,
-//             "id_catalog": 1,
-//             "quantity": 1
-//           },
-//           {
-//             "id": 2,
-//             "name": "Liquid Container Green",
-//             "img": "sp3.png",
-//             "price": 10,
-//             "price_sale": 12,
-//             "id_catalog": 2,
-//             "quantity": 1
-//           },
-//           {
-//             "id": 3,
-//             "name": "Ellie Bath Salt",
-//             "img": "sp4.png",
-//             "price": 10,
-//             "price_sale": 5,
-//             "id_catalog": 2,
-//             "quantity": 1
-//           }
-//     ]
-//     let el = document.getElementById('searchInput').value
-//     let kq = data.filter(item => 
-//         item.name.toLowerCase().includes(el.toLowerCase()))
-//     console.log(kq);
-// }
-
-// searchInput()

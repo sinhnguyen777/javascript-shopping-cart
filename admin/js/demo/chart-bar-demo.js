@@ -70,8 +70,8 @@ function chart1(data) {
   <p>Email: ${email}</p>
   <h3>Toltals: &nbsp; £${max}</h3>
   `
-  var maxtoltals = document.getElementById('maxtoltals')
-  maxtoltals.innerHTML = `£${max}`
+  // var maxtoltals = document.getElementById('maxtoltals')
+  // maxtoltals.innerHTML = `£${max}`
 }
 
 function chart2(data) {
@@ -142,7 +142,7 @@ function chart2(data) {
 
   var arr = [thang_1, thang_2, thang_3, thang_4, thang_5, thang_6, thang_7]
   var maxArr = Math.max.apply(Math, arr);
-  document.getElementById('lengthOrder').innerHTML = `${maxArr}` 
+  // document.getElementById('lengthOrder').innerHTML = `${maxArr}` 
 
   // Bar Chart Example
   var ctx = document.getElementById("myBarChart");
@@ -155,7 +155,7 @@ function chart2(data) {
         backgroundColor: "#4e73df",
         hoverBackgroundColor: "#2e59d9",
         borderColor: "#4e73df",
-        data: [2, 5, thang_3, thang_4, thang_5, thang_6],
+        data: [3, 1, thang_3, thang_4, thang_5, thang_6],
       }],
     },
     options: {

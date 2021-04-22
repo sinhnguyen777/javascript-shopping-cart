@@ -126,6 +126,7 @@ const postOrderDetail = async (idOder) => {
     localStorage.removeItem('cartNumbers')
     localStorage.removeItem('totalCost')
     storage = []
+    
 
 }
 

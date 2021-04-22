@@ -11,6 +11,7 @@
   <title>RuangAdmin - Alerts</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.16.5/sweetalert2.min.css" integrity="sha512-1ZnBKRTKQpSWa+zTPLIvikrThliiXRIUAk7vYALF8lpHpkUI8y9kynkCtmjpxGRiF4Gic9cXcbHrcAP3CPif4Q==" crossorigin="anonymous" />
   <link href="css/ruang-admin.css" rel="stylesheet">
 </head>
 
@@ -131,7 +132,7 @@
                 aria-labelledby="searchDropdown">
                 <form class="navbar-search">
                   <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
+                    <input type="text" id="searchInput" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
                       aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button">
@@ -413,7 +414,7 @@
                   
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="listCata">
                 <!-- <tr>
                   <th scope="row"><input type="checkbox" name="acs" id=""></th>
                   <th scope="row">1</th>
@@ -507,6 +508,7 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.16.5/sweetalert2.all.min.js" integrity="sha512-IKjW1qKP82ZhXn4VlzMIMvR9JhoJPBXoTyqFtdYtHkEaNdYyZ27jSijFZcFIMhBMw93TVujeLDkvHvzik8lIDg==" crossorigin="anonymous"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>

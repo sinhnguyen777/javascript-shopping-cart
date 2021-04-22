@@ -26,6 +26,7 @@ const showOrder = data => {
             <td>${index.name}</td>
             <td>${index.address}</td>
             <td>${index.email}</td>
+            <td>£${index.toltals}.00</td>
             <td><span class="badge badge-success">${index.status}</span></td>
             <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
         </tr>

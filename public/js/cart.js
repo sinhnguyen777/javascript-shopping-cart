@@ -5,6 +5,8 @@ function displayCart() {
     let productToltals = document.querySelector('#cartToltals')
     let cartCost = localStorage.getItem('totalCost');
 
+    
+
     if (cartItems && productContainer) {
         productContainer.innerHTML = ``;
         Object.values(cartItems).map(item => {
@@ -119,6 +121,7 @@ function deleteCart(id) {
     localStorage.setItem('cartNumbers', JSON.stringify(number))
     document.querySelector("#itemCartSpan").textContent = localStorage.getItem('cartNumbers')
     displayCart()
+    
 }
 
 function giam(id) {
