@@ -1,5 +1,9 @@
-# asm-js-nangcao
+# shopping websites
 
-# javascript
-# json-server
-# shopping cart javascript and localstorage
+# TECHNOLOGY
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
+- Json-erver
+
