@@ -5,5 +5,5 @@
 - CSS
 - Bootstrap
 - JavaScript
-- Json-erver
+- Json-server
 
